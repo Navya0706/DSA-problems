@@ -23,3 +23,6 @@ def largest(self,arr: List[int]) -> int:
             if arr[i]>largest:
                 largest=arr[i]
         return largest        
+
+"method2"
+print(arr[n-1])
