@@ -1,0 +1,28 @@
+"""Given an array arr, return the second largest distinct element from an array. If the second largest element doesn't exist then return -1.
+
+Examples:
+
+Input: arr = [12, 35, 1, 10, 34, 1]
+Output: 34
+Explanation: The largest element of the array is 35 and the second largest element is 34.
+Input: arr = [10, 10]
+Output: -1
+Explanation: The largest element of the array is 10 and the second largest element does not exist so answer is -1."""
+
+def print2largest(self, arr):
+        n = len(arr)
+        if n < 2:
+            return -1
+        first_largest = second_largest = float('-inf')
+    
+        for i in range(n):
+            if arr[i] > first_largest:
+                second_largest = first_largest
+                first_largest = arr[i]
+            elif arr[i] > second_largest and arr[i] != first_largest:
+                second_largest = arr[i]
+    
+        return second_largest if second_largest != float('-inf') else -1
+OR
+
+print(arr[n-2])
