@@ -1,3 +1,9 @@
+#Brute
+def sortArr(arr: List[int]) -> int:
+    arr.sort()
+    return arr[-1]
+
+#OPtimal
 def largest(self,arr: List[int]) -> int:
         # code here
         n=len(arr)
